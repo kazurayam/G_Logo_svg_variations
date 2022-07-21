@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group 'com.kazurayam'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.apache.xmlgraphics', name: 'batik-all', version: '1.14'
+    // https://mvnrepository.com/artifact/org.sikuli/sikuli-api
+    implementation group: 'org.sikuli', name: 'sikuli-api', version: '1.2.0'
+    // https://mvnrepository.com/artifact/org.sikuli/sikuli-core
+    implementation group: 'org.sikuli', name: 'sikuli-core', version: '1.2.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
