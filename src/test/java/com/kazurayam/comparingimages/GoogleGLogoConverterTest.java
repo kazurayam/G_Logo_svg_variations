@@ -35,8 +35,8 @@ public class GoogleGLogoConverterTest {
     @BeforeEach
     public void beforeEach() throws IOException {
         instance = new GoogleGLogoConverter();
-        instance.setXsltDir(projectDir.resolve("src/test/xslt"));
-        instance.setSourceSvg(projectDir.resolve("src/test/fixtures/Google__G__Logo.svg"));
+        instance.setXsltDir(projectDir.resolve("src/main/xslt"));
+        instance.setSourceSvg(projectDir.resolve("src/main/data/Google__G__Logo.svg"));
         instance.setOutputDir(outDir);
     }
 
@@ -50,6 +50,39 @@ public class GoogleGLogoConverterTest {
     @Test
     public void test_proc2() throws TranscoderException, IOException, TransformerException {
         GoogleGLogoConverterResult result = instance.proc2();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+
+    @Test
+    public void test_proc3() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc3();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+    @Test
+    public void test_proc5() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc5();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+    @Test
+    public void test_proc6() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc6();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+
+    @Test
+    public void test_proc7() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc7();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+
+    @Test
+    public void test_proc8() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc8();
         assertTrue(Files.exists(result.getSvg()));
         assertTrue(Files.exists(result.getPng()));
     }

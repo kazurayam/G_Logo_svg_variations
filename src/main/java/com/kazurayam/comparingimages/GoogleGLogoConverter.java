@@ -20,6 +20,34 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 import org.apache.commons.io.FileUtils;
 
+/**
+ * INPUT: a *.svg file of Google "G" Logo
+ * OUTPUT:
+ *   - a *.svg file of Google "G" Logo slightly transformed
+ *   - a *.png file converted from the transformed SVG
+ *
+ * This class implements a set of "procN" methods where N=1,2,3,...
+ *
+ * N=1: identical to the source SVG but resized to width=120, height=120 pixcels
+ * N=2: slightly chopped the blue bit
+ * N=3: shopped the blue bit off
+ * N=4: small gap
+ * N=5: turn the blue bit to black
+ * N=6: more black, turn the green bit to black
+ * N=7: more black, turn the yellow bit to black
+ * N=8: more black, turn the red bit to black
+ * N=9: N/A
+ * N=a: N/A
+ * N=b: switch the color; red and blue
+ * N=c: N/A
+ * N=d: N/A
+ * N=e: flipped vertically
+ * N=f: rotated
+ * N=g: flipped horizontally
+ *
+ *
+ * Inspired by a post https://forum.katalon.com/t/verify-image-present-accuracy/67129
+ */
 public class GoogleGLogoConverter {
 
     private Path xsltDir;
@@ -29,16 +57,22 @@ public class GoogleGLogoConverter {
     public static void main(String[] args) throws IOException, TranscoderException, TransformerException {
         Path projectDir = Paths.get(System.getProperty("user.dir"));
         GoogleGLogoConverter instance = new GoogleGLogoConverter();
-        instance.setXsltDir(projectDir.resolve("src/test/xslt"));
-        instance.setSourceSvg(projectDir.resolve("src/test/fixtures/Google__G__Logo.svg"));
+        instance.setXsltDir(projectDir.resolve("src/main/xslt"));
+        instance.setSourceSvg(projectDir.resolve("src/main/data/Google__G__Logo.svg"));
         Path outDir = projectDir.resolve("build/tmp/testOutput")
                 .resolve(GoogleGLogoConverter.class.getSimpleName());
         if (Files.exists(outDir)) {
             FileUtils.deleteDirectory(outDir.toFile());
         }
         instance.setOutputDir(outDir);
+        //
         instance.proc1();
         instance.proc2();
+        instance.proc3();
+        instance.proc5();
+        instance.proc6();
+        instance.proc7();
+        instance.proc8();
     }
     public GoogleGLogoConverter() {}
 
@@ -61,6 +95,26 @@ public class GoogleGLogoConverter {
 
     public GoogleGLogoConverterResult proc2() throws TransformerException, TranscoderException, IOException {
         return this.process("2");
+    }
+
+    public GoogleGLogoConverterResult proc3() throws TransformerException, TranscoderException, IOException {
+        return this.process("3");
+    }
+
+    public GoogleGLogoConverterResult proc5() throws TransformerException, TranscoderException, IOException {
+        return this.process("5");
+    }
+
+    public GoogleGLogoConverterResult proc6() throws TransformerException, TranscoderException, IOException {
+        return this.process("6");
+    }
+
+    public GoogleGLogoConverterResult proc7() throws TransformerException, TranscoderException, IOException {
+        return this.process("7");
+    }
+
+    public GoogleGLogoConverterResult proc8() throws TransformerException, TranscoderException, IOException {
+        return this.process("8");
     }
 
     private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {
