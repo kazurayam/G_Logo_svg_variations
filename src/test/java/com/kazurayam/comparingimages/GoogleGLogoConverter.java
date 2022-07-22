@@ -31,6 +31,7 @@ public class GoogleGLogoConverter {
     public static void main(String[] args) throws IOException, TranscoderException, TransformerException {
         GoogleGLogoConverter instance = new GoogleGLogoConverter();
         instance.proc1();
+        instance.proc2();
     }
     public GoogleGLogoConverter() throws IOException {
         Path projectDir = Paths.get(System.getProperty("user.dir"));
@@ -46,6 +47,14 @@ public class GoogleGLogoConverter {
         Path resultSvg = testOutputDir.resolve(resolveResultSvgFilename("1"));
         this.transformSVG(sourceSvg, xsltFile, resultSvg);
         Path outputPng = testOutputDir.resolve(resolvePngFilename("1"));
+        this.convertSVGtoPNG(resultSvg, outputPng);
+    }
+
+    public void proc2() throws TransformerException, TranscoderException, IOException {
+        Path xsltFile = xsltDir.resolve(resolveXsltFilename("2"));
+        Path resultSvg = testOutputDir.resolve(resolveResultSvgFilename("2"));
+        this.transformSVG(sourceSvg, xsltFile, resultSvg);
+        Path outputPng = testOutputDir.resolve(resolvePngFilename("2"));
         this.convertSVGtoPNG(resultSvg, outputPng);
     }
 
