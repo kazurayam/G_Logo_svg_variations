@@ -55,24 +55,23 @@ public class GoogleGLogoConverter {
         Files.createDirectories(outputDir);
     }
 
-    public void proc1() throws TransformerException, TranscoderException, IOException {
-        Path xsltFile = xsltDir.resolve(resolveXsltFilename("1"));
-        Path resultSvg = outputDir.resolve(resolveResultSvgFilename("1"));
-        ensureParentDir(resultSvg);
-        this.transformSVG(sourceSvg, xsltFile, resultSvg);
-        Path outputPng = outputDir.resolve(resolvePngFilename("1"));
-        ensureParentDir(outputPng);
-        this.convertSVGtoPNG(resultSvg, outputPng);
+    public GoogleGLogoConverterResult proc1() throws TransformerException, TranscoderException, IOException {
+        return this.process("1");
     }
 
-    public void proc2() throws TransformerException, TranscoderException, IOException {
-        Path xsltFile = xsltDir.resolve(resolveXsltFilename("2"));
-        Path resultSvg = outputDir.resolve(resolveResultSvgFilename("2"));
+    public GoogleGLogoConverterResult proc2() throws TransformerException, TranscoderException, IOException {
+        return this.process("2");
+    }
+
+    private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {
+        Path xsltFile = xsltDir.resolve(resolveXsltFilename(n));
+        Path resultSvg = outputDir.resolve(resolveResultSvgFilename(n));
         ensureParentDir(resultSvg);
         this.transformSVG(sourceSvg, xsltFile, resultSvg);
-        Path outputPng = outputDir.resolve(resolvePngFilename("2"));
+        Path outputPng = outputDir.resolve(resolvePngFilename(n));
         ensureParentDir(outputPng);
         this.convertSVGtoPNG(resultSvg, outputPng);
+        return new GoogleGLogoConverterResult(resultSvg, outputPng);
     }
 
     /**
