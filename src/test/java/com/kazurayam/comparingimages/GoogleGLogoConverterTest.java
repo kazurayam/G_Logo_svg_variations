@@ -87,10 +87,22 @@ public class GoogleGLogoConverterTest {
         assertTrue(Files.exists(result.getSvg()));
         assertTrue(Files.exists(result.getPng()));
     }
-
     @Test
     public void test_proc8() throws TranscoderException, IOException, TransformerException {
         GoogleGLogoConverterResult result = instance.proc8();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+    @Test
+    public void test_proc9() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.proc9();
+        assertTrue(Files.exists(result.getSvg()));
+        assertTrue(Files.exists(result.getPng()));
+    }
+
+    @Test
+    public void test_procA() throws TranscoderException, IOException, TransformerException {
+        GoogleGLogoConverterResult result = instance.procA();
         assertTrue(Files.exists(result.getSvg()));
         assertTrue(Files.exists(result.getPng()));
     }
