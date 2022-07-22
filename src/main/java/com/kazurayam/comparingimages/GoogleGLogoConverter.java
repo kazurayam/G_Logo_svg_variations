@@ -69,6 +69,7 @@ public class GoogleGLogoConverter {
         instance.proc1();
         instance.proc2();
         instance.proc3();
+        instance.proc4();
         instance.proc5();
         instance.proc6();
         instance.proc7();
@@ -99,6 +100,10 @@ public class GoogleGLogoConverter {
 
     public GoogleGLogoConverterResult proc3() throws TransformerException, TranscoderException, IOException {
         return this.process("3");
+    }
+
+    public GoogleGLogoConverterResult proc4() throws TransformerException, TranscoderException, IOException {
+        return this.process("4");
     }
 
     public GoogleGLogoConverterResult proc5() throws TransformerException, TranscoderException, IOException {
