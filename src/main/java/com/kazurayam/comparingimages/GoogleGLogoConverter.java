@@ -76,7 +76,7 @@ public class GoogleGLogoConverter {
         instance.proc9();
         instance.procA();
         instance.procB();
-
+        instance.procC();
     }
     public GoogleGLogoConverter() {}
 
@@ -135,6 +135,10 @@ public class GoogleGLogoConverter {
 
     public GoogleGLogoConverterResult procB() throws TransformerException, TranscoderException, IOException {
         return this.process("B");
+    }
+
+    public GoogleGLogoConverterResult procC() throws TransformerException, TranscoderException, IOException {
+        return this.process("C");
     }
 
     private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {
