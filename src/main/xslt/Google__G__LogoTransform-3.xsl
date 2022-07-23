@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Google__G__LogoTransform-2.xsl
+<!-- Google__G__LogoTransform-3.xsl
    1. resize the Google__G_Logo SVG to be 120x120 pixel
    2. chopped the blue bit off
    3. convert SVG to PNG

@@ -49,7 +49,6 @@ import org.apache.commons.io.FileUtils;
  * Inspired by a post https://forum.katalon.com/t/verify-image-present-accuracy/67129
  */
 public class GoogleGLogoConverter {
-
     private Path xsltDir;
     private Path sourceSvg;
     private Path outputDir;
@@ -75,6 +74,9 @@ public class GoogleGLogoConverter {
         instance.proc7();
         instance.proc8();
         instance.proc9();
+        instance.procA();
+        instance.procB();
+
     }
     public GoogleGLogoConverter() {}
 
@@ -129,6 +131,10 @@ public class GoogleGLogoConverter {
 
     public GoogleGLogoConverterResult procA() throws TransformerException, TranscoderException, IOException {
         return this.process("A");
+    }
+
+    public GoogleGLogoConverterResult procB() throws TransformerException, TranscoderException, IOException {
+        return this.process("B");
     }
 
     private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Google__G__LogoTransform-1.xsl
+<!-- Google__G__LogoTransform-9.xsl
    1. resize the Google__G_Logo SVG to be 120x120 pixel
    2. background rectangle in black
    3. convert SVG to PNG
