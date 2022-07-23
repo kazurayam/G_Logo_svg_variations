@@ -1,4 +1,4 @@
-package com.kazurayam.comparingimages;
+package com.kazurayam.googleglogo;
 
 import java.nio.file.Path;
 

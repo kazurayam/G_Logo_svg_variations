@@ -1,0 +1,88 @@
+
+= Google G Logo variations
+
+[cols="1,2,3,3"]
+|===
+|id|description|SVG|PNG
+
+|#1
+|same as the original
+|image:output/svg/GoogleGLogo-1.svg[]
+|image:output/png/GoogleGLogo-1.png[]
+
+|#2
+|slightly chopped the blue bit
+|image:output/svg/GoogleGLogo-2.svg[]
+|image:output/png/GoogleGLogo-2.png[]
+
+|#3
+|chopped the blue off
+|image:output/svg/GoogleGLogo-3.svg[]
+|image:output/png/GoogleGLogo-3.png[]
+
+|#4
+|small gap
+|image:output/svg/GoogleGLogo-4.svg[]
+|image:output/png/GoogleGLogo-4.png[]
+
+|#5
+|turn the blue bit to black
+|image:output/svg/GoogleGLogo-5.svg[]
+|image:output/png/GoogleGLogo-5.png[]
+
+|#6
+|turn the blue & green bit to black
+|image:output/svg/GoogleGLogo-6.svg[]
+|image:output/png/GoogleGLogo-6.png[]
+
+|#7
+|turn the blue, green & yellow bit to black
+|image:output/svg/GoogleGLogo-7.svg[]
+|image:output/png/GoogleGLogo-7.png[]
+
+|#8
+|turn the blue, green, yellow & red bit to black
+|image:output/svg/GoogleGLogo-8.svg[]
+|image:output/png/GoogleGLogo-8.png[]
+
+|#9
+|background in black
+|image:output/svg/GoogleGLogo-9.svg[]
+|image:output/png/GoogleGLogo-9.png[]
+
+|#A
+|made dirty
+|image:output/svg/GoogleGLogo-A.svg[]
+|image:output/png/GoogleGLogo-A.png[]
+
+|#B
+|swap blue and red
+|image:output/svg/GoogleGLogo-B.svg[]
+|image:output/png/GoogleGLogo-B.png[]
+
+|#C
+|apply skewX transformation
+|image:output/svg/GoogleGLogo-C.svg[]
+|image:output/png/GoogleGLogo-C.png[]
+
+|#D
+|resized smaller a bit
+|image:output/svg/GoogleGLogo-D.svg[]
+|image:output/png/GoogleGLogo-D.png[]
+
+|#E
+|flipped vertically
+|image:output/svg/GoogleGLogo-E.svg[]
+|image:output/png/GoogleGLogo-E.png[]
+
+|#F
+|rotate -90 degree
+|image:output/svg/GoogleGLogo-F.svg[]
+|image:output/png/GoogleGLogo-F.png[]
+
+|#G
+|flipped horizontally
+|image:output/svg/GoogleGLogo-G.svg[]
+|image:output/png/GoogleGLogo-G.png[]
+
+|===

@@ -22,7 +22,7 @@
       <xsl:attribute name="height">120</xsl:attribute>
 
       <xsl:element name="svg:g">
-        <xsl:attribute name="transform">scale(-1,1) translate(-24,0)</xsl:attribute>
+        <xsl:attribute name="transform">scale(1,-1) translate(0,-24)</xsl:attribute>
         <xsl:apply-templates />
       </xsl:element>
 

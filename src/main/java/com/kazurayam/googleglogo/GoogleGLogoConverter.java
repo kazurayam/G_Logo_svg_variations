@@ -1,4 +1,4 @@
-package com.kazurayam.comparingimages;
+package com.kazurayam.googleglogo;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -58,8 +58,7 @@ public class GoogleGLogoConverter {
         GoogleGLogoConverter instance = new GoogleGLogoConverter();
         instance.setXsltDir(projectDir.resolve("src/main/xslt"));
         instance.setSourceSvg(projectDir.resolve("src/main/data/Google__G__Logo.svg"));
-        Path outDir = projectDir.resolve("build/tmp/testOutput")
-                .resolve(GoogleGLogoConverter.class.getSimpleName());
+        Path outDir = projectDir.resolve("docs/output");
         if (Files.exists(outDir)) {
             FileUtils.deleteDirectory(outDir.toFile());
         }
@@ -81,6 +80,8 @@ public class GoogleGLogoConverter {
         instance.procE();
         instance.procF();
         instance.procG();
+
+        System.out.println("Done. Find the output at " + outDir.toString());
     }
     public GoogleGLogoConverter() {}
 
@@ -260,11 +261,11 @@ public class GoogleGLogoConverter {
     }
 
     private String resolveResultSvgFilename(String n) {
-        return "svg/Google__G__Logo-" + n + ".svg";
+        return "svg/GoogleGLogo-" + n + ".svg";
     }
 
     private String resolvePngFilename(String n) {
-        return "png/Google__G__Logo-" + n + ".png";
+        return "png/GoogleGLogo-" + n + ".png";
     }
 
     private void ensureParentDir(Path file) throws IOException {

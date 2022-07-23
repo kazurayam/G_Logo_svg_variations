@@ -1,4 +1,4 @@
-package com.kazurayam.comparingimages;
+package com.kazurayam.googleglogo;
 
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.commons.io.FileUtils;

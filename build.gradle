@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'groovy'
+    id 'application'
 }
 
 group 'com.kazurayam'
@@ -23,4 +24,25 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.kazurayam.googleglogo.GoogleGLogoConverter'
+}
+
+tasks.register("toHtml") {
+    doLast {
+        exec {
+            workingDir './docs'
+            commandLine 'asciidoctor index.adoc'
+        }
+    }
+}
+
+tasks.register("myZip", Zip) {
+    from 'docs'
+    include '*'
+    include '*/*'
+    archiveName 'GLogoVariations.zip'
+    destinationDir(file('./build'))
 }
