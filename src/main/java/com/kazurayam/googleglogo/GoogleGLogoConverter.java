@@ -28,7 +28,7 @@ import org.apache.commons.io.FileUtils;
  *
  * This class implements a set of "procN" methods where N=1,2,3,...
  *
- * N=1: identical to the source SVG but resized to width=120, height=120 pixcels
+ * N=1: just resized to width=120, height=120 pixcels
  * N=2: slightly chopped the blue bit
  * N=3: shopped the blue bit off
  * N=4: small gap
@@ -36,13 +36,13 @@ import org.apache.commons.io.FileUtils;
  * N=6: more black, turn the green bit to black
  * N=7: more black, turn the yellow bit to black
  * N=8: more black, turn the red bit to black
- * N=9: N/A
- * N=a: N/A
- * N=b: switch the color; red and blue
- * N=c: N/A
- * N=d: N/A
+ * N=9: background in black
+ * N=a: made dirty
+ * N=b: swap blue and red
+ * N=c: apply skewX transformation
+ * N=d: resized a bit smaller
  * N=e: flipped vertically
- * N=f: rotated
+ * N=f: rotated -90 degree
  * N=g: flipped horizontally
  *
  *
