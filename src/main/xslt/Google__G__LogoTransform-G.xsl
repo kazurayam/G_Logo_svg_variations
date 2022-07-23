@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Google__G__LogoTransform-F.xsl
+<!-- Google__G__LogoTransform-G.xsl
    1. resize the Google__G_Logo SVG to be 120x120 pixel
-   2. rotate -90 degree
+   2. flip horizontally
    3. convert SVG to PNG
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -22,7 +22,7 @@
       <xsl:attribute name="height">120</xsl:attribute>
 
       <xsl:element name="svg:g">
-        <xsl:attribute name="transform">rotate(-90, 12, 12)</xsl:attribute>
+        <xsl:attribute name="transform">scale(-1,1) translate(-24,0)</xsl:attribute>
         <xsl:apply-templates />
       </xsl:element>
 

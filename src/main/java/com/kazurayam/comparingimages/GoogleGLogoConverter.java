@@ -80,6 +80,7 @@ public class GoogleGLogoConverter {
         instance.procD();
         instance.procE();
         instance.procF();
+        instance.procG();
     }
     public GoogleGLogoConverter() {}
 
@@ -201,6 +202,12 @@ public class GoogleGLogoConverter {
         return this.process("F");
     }
 
+    /**
+     * Flip horizontally
+     */
+    public GoogleGLogoConverterResult procG() throws TransformerException, TranscoderException, IOException {
+        return this.process("G");
+    }
 
     private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {
         Path xsltFile = xsltDir.resolve(resolveXsltFilename(n));
