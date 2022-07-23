@@ -32,9 +32,9 @@ $ ./gradlew run
 
 You can see the demo output at:
 
+- https://kazurayam.github.io/G_Logo_svg_variations/
+
+You can download the image files:
+
 - 
-
-Also there is a JUnit5 test for the class.
-
-- [com.kazurayam.googleglogo.GoogleGLogoConverterTest](src/test/java/com/kazurayam/googleglogo/GoogleGLogoConverterTest.java)
 
