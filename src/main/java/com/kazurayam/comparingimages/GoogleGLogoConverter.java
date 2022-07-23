@@ -93,52 +93,102 @@ public class GoogleGLogoConverter {
         Files.createDirectories(outputDir);
     }
 
+    /**
+     * Just resized, not modification of image
+     */
     public GoogleGLogoConverterResult proc1() throws TransformerException, TranscoderException, IOException {
         return this.process("1");
     }
 
+    /**
+     * The blue portion is slightly chopped
+     */
     public GoogleGLogoConverterResult proc2() throws TransformerException, TranscoderException, IOException {
         return this.process("2");
     }
 
+    /**
+     * The blue portion is completely erased
+     */
     public GoogleGLogoConverterResult proc3() throws TransformerException, TranscoderException, IOException {
         return this.process("3");
     }
 
+    /**
+     * Narrow gap
+     */
     public GoogleGLogoConverterResult proc4() throws TransformerException, TranscoderException, IOException {
         return this.process("4");
     }
 
+    /**
+     * Turn blue to black
+     */
     public GoogleGLogoConverterResult proc5() throws TransformerException, TranscoderException, IOException {
         return this.process("5");
     }
 
+    /**
+     * Turn blue + green to black
+     */
     public GoogleGLogoConverterResult proc6() throws TransformerException, TranscoderException, IOException {
         return this.process("6");
     }
 
+    /**
+     * Turn blue + green + yellow to black
+     */
     public GoogleGLogoConverterResult proc7() throws TransformerException, TranscoderException, IOException {
         return this.process("7");
     }
 
+    /**
+     * All portions in black
+     */
     public GoogleGLogoConverterResult proc8() throws TransformerException, TranscoderException, IOException {
         return this.process("8");
     }
 
+    /**
+     * Black background
+     */
     public GoogleGLogoConverterResult proc9() throws TransformerException, TranscoderException, IOException {
         return this.process("9");
     }
 
+    /**
+     * Dirt points
+     */
     public GoogleGLogoConverterResult procA() throws TransformerException, TranscoderException, IOException {
         return this.process("A");
     }
 
+    /**
+     * Switch colors
+     */
     public GoogleGLogoConverterResult procB() throws TransformerException, TranscoderException, IOException {
         return this.process("B");
     }
 
+    /**
+     * SkewX
+     */
     public GoogleGLogoConverterResult procC() throws TransformerException, TranscoderException, IOException {
         return this.process("C");
+    }
+
+    /**
+     * Resize smaller
+     */
+    public GoogleGLogoConverterResult procD() throws TransformerException, TranscoderException, IOException {
+        return this.process("D");
+    }
+
+    /**
+     * Flip vertical
+     */
+    public GoogleGLogoConverterResult procE() throws TransformerException, TranscoderException, IOException {
+        return this.process("E");
     }
 
     private GoogleGLogoConverterResult process(String n) throws TransformerException, TranscoderException, IOException {
